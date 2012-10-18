@@ -1,0 +1,26 @@
+<h1>Veja abaixo <%= @numero.size > 1 ? "os seus #{@numero.size} jogos ": "o seu jogo" %></h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>N. Jogo</th>
+            <th>1°</th>
+            <th>2°</th>
+            <th>3°</th>
+            <th>4°</th>
+            <th>5°</th>
+            <th>6°</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @i = 0  %>
+    <% @numero.each do |n| %>
+        <tr class="info">
+            <td><%=@numero.index(n)+1%></td>
+            <% @numero[@i].each do |m| %>
+                <td><%=m%></td>
+              <% end %>
+        </tr>
+        <% @i = @i + 1 %>
+    <%end  %>
+    </tbody>
+</table>
