@@ -1,17 +1,16 @@
         <div class="hero-unit" >
             <div id="divtitulo">
                 <h1>Vamos tentar a sorte?</h1>
-                <p>
+                <p class="alert alert-success">
                     Você pode gerar até 10 jogos por vez, vamos lá, entre com a quantidade de jogos que deseja!
                 </p>
             </div>
+            <div id="divtitulo">
                      <form id="meuform" class="form-inline" action="sorte" method="post" accept-charset="utf-8" >
-                     <input type="text" maxlength="2" name="number"/>
+                    Quantidade de Jogos <input type="text" maxlength="2" name="number" id="number"/>
 
-                <p>
 
-                     <button type="submit" class="btn btn-large btn-success" name="button" >Enviar</button>
-                </p>
+                     <button type="submit" class="btn btn-large btn-success" name="button" onclick="return validar()" >Enviar <i class="icon-ok icon-white"></i></button>
                      </form>
-
+                 </div>
         </div>

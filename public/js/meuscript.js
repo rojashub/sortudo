@@ -1,24 +1,18 @@
 // Inicia o validador ao carregar a página
-$(function() {
-    // valida o formulário
-    $('#meuform').validate({
-        // define regras para os campos
-        rules: {
-            number: {
-                required: true,
-                minlength: 1,
-                maxlength: 2,
-                number: true,
-                range: [1, 10]
-            }
-            },
+/*
+$('#meuform').submit(function() {
+    var numero = $('#number').val();
+    if (numero == ""){
+        alert('Preencha o campo com um numero de 1 a 10');
+        $('#number').focus();
+        return false;
+    }
+    if (numero < 1 || numero > 10){
+        alert("Quantidade inválida!!!");
+        $('#number').focus();
+        return false;
 
-
-    // define messages para cada campo
-        messages: {
-            number: "Preencha com numero de 1 a 10"
-        }
-    });
+    }
 });
 
 
